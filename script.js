@@ -17,12 +17,24 @@ window.addEventListener('keydown', (event) =>
 {
     if (event.key === 'ArrowUp')
     {
-        inflateBallon();
+        inflateBalloon();
     } else if (event.key === 'ArrowDown')
     {
-        deflateBallon();
+        deflateBalloon();
     }
-})
+});
+
+function inflateBalloon()
+{
+    const currentSize = parseFloat(window.getComputedStyle(balloon).fontsize);
+    balloon.style.fontSize = '${currentSize * 1.1}px';
+}
+
+function deflateBalloon()
+{
+    const currentSize = parseFloat(window.getComputedStyle(balloon).fontsize);
+    balloon.style.fontSize = '${currentSize * 0.9}px';
+}
 
 
 // 2. The index.html page has a tabbed layout. Make the default state of the layout show
