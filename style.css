@@ -28,8 +28,3 @@ body {
 	position: relative;
 	top: .5em;
 }
-
-#ballon {
-	font-size: 20%;
-	transition: font-size 0.2s ease;
-}
